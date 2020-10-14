@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var email=document.forms["myForm"]["email"].value
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if(email=""){
+      alert("Email should be there")
+  }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+
+  Email:<input type="text" name="email">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
